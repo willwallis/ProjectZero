@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -34,5 +36,33 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /** Called when the user clicks a button */
+    public void launchApp(View view) {
+        // Do something in response to button click
+        TextView testTextView = (TextView) findViewById(R.id.TestText);
+        String viewName = "Button Not Recognised";
+        switch (view.getId()) {
+            case R.id.SpotifyStreamer:
+                viewName = "Spotify Streamer";
+                break;
+            case R.id.ScoresApp:
+                viewName = "Scores App";
+                break;
+            case R.id.LibraryApp:
+                viewName = "Library App";
+                break;
+            case R.id.BuildItBigger:
+                viewName = "Build IT Bigger";
+                break;
+            case R.id.XyzReader:
+                viewName = "XYZ Reader";
+                break;
+            case R.id.Capstone:
+                viewName = "Capstone: My Own App";
+                break;
+        }
+        testTextView.setText(viewName);
     }
 }

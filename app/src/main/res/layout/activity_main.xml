@@ -15,14 +15,18 @@
         android:text="My Nanodegree Apps!" />
 
     <Button
+        android:id="@+id/SpotifyStreamer"
         android:text="Spotify Streamer"
         android:textAllCaps="true"
         android:background="@drawable/button_orange"
         android:layout_marginTop="8dp"
         android:layout_width="200dp"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:onClick="launchApp"/>
 
     <Button
+        android:id="@+id/ScoresApp"
+        android:onClick="launchApp"
         android:text="Scores App"
         android:textAllCaps="true"
         android:background="@drawable/button_orange"
@@ -30,6 +34,8 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
     <Button
+        android:id="@+id/LibraryApp"
+        android:onClick="launchApp"
         android:text="Library App"
         android:background="@drawable/button_orange"
         android:textAllCaps="true"
@@ -37,6 +43,8 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
     <Button
+        android:id="@+id/BuildItBigger"
+        android:onClick="launchApp"
         android:text="Build IT Bigger"
         android:textAllCaps="true"
         android:background="@drawable/button_orange"
@@ -44,6 +52,8 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
     <Button
+        android:id="@+id/XyzReader"
+        android:onClick="launchApp"
         android:text="XYZ Reader"
         android:background="@drawable/button_orange"
         android:textAllCaps="true"
@@ -51,6 +61,8 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
     <Button
+        android:id="@+id/Capstone"
+        android:onClick="launchApp"
         android:text="Capstone: My Own App"
         android:textColor="#ffffff"
         android:background="@drawable/button_red"
@@ -58,5 +70,11 @@
         android:layout_marginTop="8dp"
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
-
+    <TextView
+        android:id="@+id/TestText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="16dp"
+        android:text="" />
 </LinearLayout>
