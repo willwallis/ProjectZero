@@ -1,11 +1,13 @@
 package com.knewto.www.projectzero;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -38,20 +40,25 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /** Called when the user clicks a button */
+    /** When the user clicks a button show toast with the app name, placeholder until apps built
+     * Have left TestView in place in case required for future testing. Would remove from final app.
+     * */
     public void launchApp(View view) {
-        // Do something in response to button click
-        TextView testTextView = (TextView) findViewById(R.id.TestText);
-        String viewName = "Button Not Recognised";
+        // Initiate Toast
+        Context context = getApplicationContext();
+        int duration = Toast.LENGTH_SHORT;
+//        TextView testTextView = (TextView) findViewById(R.id.TestText);
+        String viewName = "Secret";
+        // Identify which app has been selected
         switch (view.getId()) {
             case R.id.SpotifyStreamer:
                 viewName = "Spotify Streamer";
                 break;
             case R.id.ScoresApp:
-                viewName = "Scores App";
+                viewName = "Scores";
                 break;
             case R.id.LibraryApp:
-                viewName = "Library App";
+                viewName = "Library";
                 break;
             case R.id.BuildItBigger:
                 viewName = "Build IT Bigger";
@@ -60,9 +67,13 @@ public class MainActivity extends ActionBarActivity {
                 viewName = "XYZ Reader";
                 break;
             case R.id.Capstone:
-                viewName = "Capstone: My Own App";
+                viewName = "Capstone";
                 break;
         }
-        testTextView.setText(viewName);
+//        testTextView.setText(viewName);
+        // Create string and toast it!
+        String toastText = "This button will launch my " + viewName + " app!";
+        Toast toast = Toast.makeText(context, toastText, duration);
+        toast.show();
     }
 }
