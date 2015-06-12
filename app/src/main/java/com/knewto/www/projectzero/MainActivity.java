@@ -1,6 +1,7 @@
 package com.knewto.www.projectzero;
 
 import android.content.Context;
+import android.media.MediaPlayer;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -44,33 +45,43 @@ public class MainActivity extends ActionBarActivity {
      * Have left TestView in place in case required for future testing. Would remove from final app.
      * */
     public void launchApp(View view) {
-        // Initiate Toast
+        // Initiate Toast, App Name & Sound outside of case
         Context context = getApplicationContext();
         int duration = Toast.LENGTH_SHORT;
-//        TextView testTextView = (TextView) findViewById(R.id.TestText);
         String viewName = "Secret";
+        int soundName= 2131099648;
+//        TextView testTextView = (TextView) findViewById(R.id.TestText);
         // Identify which app has been selected
         switch (view.getId()) {
             case R.id.SpotifyStreamer:
                 viewName = "Spotify Streamer";
+                soundName = getResources().getIdentifier("firstclass", "raw", getPackageName());
                 break;
             case R.id.ScoresApp:
                 viewName = "Scores";
+                soundName = getResources().getIdentifier("thebest", "raw", getPackageName());
                 break;
             case R.id.LibraryApp:
                 viewName = "Library";
+                soundName = getResources().getIdentifier("alrightythen", "raw", getPackageName());
                 break;
             case R.id.BuildItBigger:
                 viewName = "Build IT Bigger";
+                soundName = getResources().getIdentifier("problemo", "raw", getPackageName());
                 break;
             case R.id.XyzReader:
                 viewName = "XYZ Reader";
+                soundName = getResources().getIdentifier("allright", "raw", getPackageName());
                 break;
             case R.id.Capstone:
                 viewName = "Capstone";
+                soundName = getResources().getIdentifier("theverybest", "raw", getPackageName());
                 break;
         }
 //        testTextView.setText(viewName);
+        // Play Sound File
+        MediaPlayer mp = MediaPlayer.create(context, soundName);
+        mp.start();
         // Create string and toast it!
         String toastText = "This button will launch my " + viewName + " app!";
         Toast toast = Toast.makeText(context, toastText, duration);
