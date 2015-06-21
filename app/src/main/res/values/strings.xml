@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">My App Portfolio</string>
-
-    <string name="hello_world">Hello world!</string>
+    <string name="app_title">My App Portfolio</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Button names -->
+    <string name="selection1">Spotify Streamer</string>
+    <string name="selection2">Scores App</string>
+    <string name="selection3">Library App</string>
+    <string name="selection4">Build It Bigger</string>
+    <string name="selection5">XYZ Reader</string>
+    <string name="selection6">Capstone: My Own App</string>
+
 </resources>
